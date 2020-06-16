@@ -158,15 +158,24 @@
             </nav>
 
             <section class="chat-windows">
+              <ul class="sent-messages">
+                <li class="contatto"><span>Ciao, come stai?</span></li>
+                <li class="io"><span>Bene, tu?</span></li>
+                <li class="contatto"><span>Qual è il senso della vita, l'universo e tutto quanto?</span></li>
+              </ul>
+            </section>
+
+            <section class="chat-windows-template">
               <ul>
-                <li></li>
+                <li class="contatto"><span class="text"><span class="timestamp"></span></span></li>
+                <li class="io"><span class="text"><span class="timestamp"></span></span></li>
               </ul>
             </section>
 
             <section class="send-input">
               <i class="icon far fa-smile"></i>
-              <input class="send-text" type="text" placeholder="Scrivi un messaggio">
-              <i class="icon fas fa-paper-plane"></i>
+              <input id="input-form" class="send-text" type="text" placeholder="Scrivi un messaggio">
+              <i id ="send" class="icon fas fa-paper-plane"></i>
             </section>
 
         </section>

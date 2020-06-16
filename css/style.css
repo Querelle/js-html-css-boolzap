@@ -186,6 +186,7 @@ ul {
 
 .chat-windows {
   background-image: url('../img/mine.jpg');
+  overflow: auto;
 }
 
 .icon {
@@ -204,6 +205,31 @@ ul {
   padding: 14px;
   border-radius: 5px;
   width: 84%;
+}
+
+.sent-messages li > span {
+  display: inline-block;
+  padding: 12px 10px;
+  margin: 2px 18px;
+  border-radius: 10px;
+  width: inherit;
+  max-width: 50%;
+}
+.contatto span {
+  background-color: #FFF;
+}
+
+.io {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.io span {
+  background-color: #d5f9ba;
+}
+
+.chat-windows-template {
+  display: none;
 }
 
 /* device > 900px */
