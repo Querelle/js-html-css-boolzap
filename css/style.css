@@ -48,8 +48,6 @@ ul {
 }
 
 .chat-list-container {
-  /* display: flex;
-  flex-direction: column; */
   width: 32%;
   height: 100%;
   border-right: solid 1px #d6d6d6;
