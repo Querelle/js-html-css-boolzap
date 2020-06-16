@@ -4,31 +4,50 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Whatsapp Web</title>
   </head>
   <body>
-    <div class="main-wrapper">
-      <div class="upper-background">
-        &nbsp;
-      </div>
-      <div class="lower-background">
-        &nbsp;
-      </div>
-      <div class="chat-main-wrapper">
-        <section class="chat-list-container">
-          <nav class="profile-manager">
-            <div class="profile-img">
 
+    <!-- wrapper principale della finestra-->
+    <div class="main-wrapper">
+
+      <!-- contenitore generale della chat -->
+      <div class="chat-main-wrapper">
+
+        <!-- colonna contentente la lista delle chat -->
+        <section class="chat-list-container">
+          <!-- navigation bar per il setting -->
+          <nav class="profile-manager">
+            <div class="upper-manager-wrapper">
+              <div class="profile-img">
+                <img src="img/avatar_2.jpg" alt="profile picture">
+              </div>
+              <div class="profile-tools icon-items">
+                <i class="fas fa-circle-notch"></i>
+                <i class="fas fa-comment-alt"></i>
+                <i class="fas fa-ellipsis-v"></i>
+              </div>
             </div>
-            <div class="profile-tools">
-              <!-- stories emoji -->
-              <!-- new conversation emoji -->
-              <!-- setting emoji -->
+            <div class="notification">
+              <div class="icon-ring icon-items">
+                <i class="fas fa-bell-slash"></i>
+              </div>
+              <div class="notification-banner">
+                <h4>Ricevi notifiche di nuovi messaggi</h4>
+                <a href="#"><p>Attiva notifiche desktop</p></a>
+              </div>
             </div>
           </nav>
+
+          <!-- lista delle chat -->
+          <section class="chat-list">
+
+          </section>
         </section>
+
         <section class="chat-window-container">
 
         </section>
