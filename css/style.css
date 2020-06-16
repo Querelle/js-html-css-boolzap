@@ -125,7 +125,7 @@ ul {
   width: 94%;
 }
 
-.list-wrapper {
+.opened-chat-wrapper {
   background-color: #FFF;
   overflow: auto;
   height: calc(100% - 49px);

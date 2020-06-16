@@ -11,15 +11,15 @@
   </head>
   <body>
 
-    <!-- wrapper principale della finestra-->
+    <!-- === wrapper principale della finestra === -->
     <div class="main-wrapper">
 
-      <!-- contenitore generale della chat -->
+      <!-- === contenitore generale della chat === -->
       <div class="chat-main-wrapper">
 
-        <!-- colonna contentente la lista delle chat -->
+        <!-- === colonna contentente la lista delle chat === -->
         <section class="chat-list-container">
-          <!-- navigation bar per il setting -->
+          <!-- === navigation bar per il setting === -->
           <nav class="profile-manager">
             <div class="upper-manager-wrapper header">
               <div class="profile-img">
@@ -31,6 +31,8 @@
                 <i class="fas fa-ellipsis-v"></i>
               </div>
             </div>
+
+            <!-- === banner delle notifiche === -->
             <div class="notification">
               <div class="icon-ring icon-items">
                 <i class="fas fa-bell-slash"></i>
@@ -42,8 +44,9 @@
             </div>
           </nav>
 
-          <!-- lista delle chat -->
+          <!-- === lista delle chat === -->
           <section class="chat-list-wrapper">
+            <!-- === barra di ricerca === -->
             <nav class="search-bar-wrapper">
               <div class="search-bar">
                 <span class="icon-items"><i class="fas fa-search"></i></span>
@@ -51,9 +54,11 @@
               </div>
             </nav>
 
-            <section class="list-wrapper">
-
+            <!-- === lista chat avviate === -->
+            <section class="opened-chat-wrapper">
               <ul class="chat-list">
+
+                <!-- === chat === -->
                 <li>
                   <div class="profile-img">
                     <img src="img/avatar_4.jpg" alt="">
@@ -65,6 +70,7 @@
                   </div>
                 </li>
 
+                <!-- === chat === -->
                 <li>
                   <div class="profile-img">
                     <img src="img/avatar_5.jpg" alt="">
@@ -76,6 +82,7 @@
                   </div>
                 </li>
 
+                <!-- === chat === -->
                 <li>
                   <div class="profile-img">
                     <img src="img/avatar_3.jpg" alt="">
@@ -87,6 +94,7 @@
                   </div>
                 </li>
 
+                <!-- === chat === -->
                 <li>
                   <div class="profile-img">
                     <img src="img/avatar_1.jpg" alt="">
@@ -98,6 +106,7 @@
                   </div>
                 </li>
 
+                <!-- === chat === -->
                 <li>
                   <div class="profile-img">
                     <img src="img/avatar_7.jpg" alt="">
@@ -109,6 +118,7 @@
                   </div>
                 </li>
 
+                <!-- === chat === -->
                 <li>
                   <div class="profile-img">
                     <img src="img/avatar_8.jpg" alt="">
@@ -120,6 +130,7 @@
                   </div>
                 </li>
 
+                <!-- === chat === -->
                 <li>
                   <div class="profile-img">
                     <img src="img/avatar_6.jpg" alt="">
@@ -130,16 +141,15 @@
                     <p class="timestamp">17.50</p>
                   </div>
                 </li>
-
               </ul>
-
-
             </section>
           </section>
         </section>
 
+        <!-- === chat window container === -->
         <section class="chat-window-container">
 
+            <!-- === header della chat === -->
             <nav class="chat-header header">
               <div class="chat-infos">
                 <div class="profile-img">
@@ -157,6 +167,7 @@
               </div>
             </nav>
 
+            <!-- === current chat window === -->
             <section class="chat-windows">
               <ul class="sent-messages">
                 <li class="contatto"><span>Ciao, come stai?</span></li>
@@ -165,17 +176,19 @@
               </ul>
             </section>
 
+            <!-- === send input === -->
+            <section class="send-input">
+              <i class="icon far fa-smile"></i>
+              <input id="input-form" class="send-text" type="text" placeholder="Scrivi un messaggio">
+              <i id ="send" class="icon fas fa-paper-plane"></i>
+            </section>
+
+            <!-- === hidden template === -->
             <section class="chat-windows-template">
               <ul>
                 <li class="contatto"><span class="text"><span class="timestamp"></span></span></li>
                 <li class="io"><span class="text"><span class="timestamp"></span></span></li>
               </ul>
-            </section>
-
-            <section class="send-input">
-              <i class="icon far fa-smile"></i>
-              <input id="input-form" class="send-text" type="text" placeholder="Scrivi un messaggio">
-              <i id ="send" class="icon fas fa-paper-plane"></i>
             </section>
 
         </section>
