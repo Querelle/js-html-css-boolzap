@@ -72,25 +72,16 @@ $(document).ready(function() {
 // === Dropdown
 
 
-  $('.cloud').on('mouseenter', function() {
+  $('.arrow').on('click', function() {
+    $(this).parents('li').siblings().find('.dropdown').removeClass('visible');
+    $(this).parents('.cloud').find('.dropdown').toggleClass('visible');
+  });
 
-    if($(this).find('.arrow').hasClass('hidden')) {
-      $(this).find('.arrow').removeClass('hidden');
-      $(this).find('.arrow').addClass('visible');
-    }
-
-    $(this).find('.arrow').on('click', function() {
-      $(this).find('.dropdown').toggleClass('visible hidden');
-    })
+  $('.delete').on('click', function() {
+    $(this).parents('.cloud').hide();
   })
 
 
-  $('.cloud').on('mouseleave', function() {
-    if($(this).find('.dropdown').hasClass('hidden')) {
-      $(this).find('.arrow').removeClass('visible');
-      $(this).find('.arrow').addClass('hidden')
-    }
-  })
 
 
 

@@ -255,30 +255,28 @@ ul {
 }
 
 .arrow {
+  display: none;
   position: absolute;
   top: 4px;
   right: 6px;
 }
 
-/* .cloud:hover .arrow {
-  display: block;
-} */
-
-.visible {
+.cloud:hover .arrow {
   display: inline-block;
 }
 
-.hidden {
-  display: none;
+.dropdown.visible {
+  display: block;
 }
 
 .dropdown {
+  display: none;
   position: absolute;
-  bottom: -310%;
-  right: -300%;
-  padding: 12px;
+  bottom: -100%;
+  right: 0;
+  padding: 8px;
   background-color: #F3FAB3;
-  width: 188px;
+  min-width: 160px;
 
 }
 
