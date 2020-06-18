@@ -70,15 +70,13 @@ $(document).ready(function() {
   });
 
 // === Dropdown
-
-
   $('.arrow').on('click', function() {
     $(this).parents('li').siblings().find('.dropdown').removeClass('visible');
     $(this).parents('.cloud').find('.dropdown').toggleClass('visible');
   });
 
   $('.delete').on('click', function() {
-    $(this).parents('.cloud').hide();
+    $(this).parents('li').hide();
   })
 
 
