@@ -1,5 +1,26 @@
 $(document).ready(function() {
 
+// === cambia chat
+  $('.chat-list li').on('click', function() {
+    var selettore = $(this).attr('data-att');
+    var name = $(this).find('h4[class="name"]').text()
+    var img = $(this).find('img').attr('src');
+    console.log($(this).attr('data-att'))
+
+    $('.chat-header h4[class="name"]').text(name)
+    $('.chat-header img').attr('src', img);
+
+    $('.chat-windows ul').each(function() {
+      if($(this).attr('data-att') == selettore) {
+        $(this).show();
+        $(this).addClass('active');
+      } else {
+        $(this).hide();
+        $(this).removeClass('active');
+      }
+    })
+  })
+
 //  === invia messaggio al click
   $('#send').on('click', function() {
     var textUser = $('#input-form').val();
@@ -10,7 +31,7 @@ $(document).ready(function() {
       setTimeout(function() {
         sendMessage('ok', '.contatto')
         $('.chat-windows').scrollTop($('.chat-windows').height());
-      }, 2000)
+      }, 1000)
 
     }
 
@@ -46,10 +67,34 @@ $(document).ready(function() {
       }
     })
 
-
   });
 
-//  === Funzioni
+// === Dropdown
+
+
+  $('.cloud').on('mouseenter', function() {
+
+    if($(this).find('.arrow').hasClass('hidden')) {
+      $(this).find('.arrow').removeClass('hidden');
+      $(this).find('.arrow').addClass('visible');
+    }
+
+    $(this).find('.arrow').on('click', function() {
+      $(this).find('.dropdown').toggleClass('visible hidden');
+    })
+  })
+
+
+  $('.cloud').on('mouseleave', function() {
+    if($(this).find('.dropdown').hasClass('hidden')) {
+      $(this).find('.arrow').removeClass('visible');
+      $(this).find('.arrow').addClass('hidden')
+    }
+  })
+
+
+
+//  === FUNZIONI
 
 //  === genera timestamp
   function getTimestamp () {
@@ -72,7 +117,8 @@ $(document).ready(function() {
     $('.template').find('.timestamp').text(time);
     $('.template').find('.text').text(text);
 
-    $(path).clone().appendTo('.sent-messages');
+    $(path).clone().appendTo('.sent-messages.active');
+
 
     $('#input-form').val("");
   }

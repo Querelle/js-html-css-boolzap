@@ -59,7 +59,7 @@
               <ul class="chat-list">
 
                 <!-- === chat === -->
-                <li>
+                <li data-att="0">
                   <div class="profile-img">
                     <img src="img/avatar_4.jpg" alt="">
                   </div>
@@ -71,7 +71,7 @@
                 </li>
 
                 <!-- === chat === -->
-                <li>
+                <li data-att="1">
                   <div class="profile-img">
                     <img src="img/avatar_5.jpg" alt="">
                   </div>
@@ -83,7 +83,7 @@
                 </li>
 
                 <!-- === chat === -->
-                <li>
+                <li data-att="2">
                   <div class="profile-img">
                     <img src="img/avatar_3.jpg" alt="">
                   </div>
@@ -95,7 +95,7 @@
                 </li>
 
                 <!-- === chat === -->
-                <li>
+                <li data-att="3">
                   <div class="profile-img">
                     <img src="img/avatar_1.jpg" alt="">
                   </div>
@@ -107,7 +107,7 @@
                 </li>
 
                 <!-- === chat === -->
-                <li>
+                <li data-att="4">
                   <div class="profile-img">
                     <img src="img/avatar_7.jpg" alt="">
                   </div>
@@ -119,7 +119,7 @@
                 </li>
 
                 <!-- === chat === -->
-                <li>
+                <li data-att="5">
                   <div class="profile-img">
                     <img src="img/avatar_8.jpg" alt="">
                   </div>
@@ -131,7 +131,7 @@
                 </li>
 
                 <!-- === chat === -->
-                <li>
+                <li data-att="6">
                   <div class="profile-img">
                     <img src="img/avatar_6.jpg" alt="">
                   </div>
@@ -169,11 +169,44 @@
 
             <!-- === current chat window === -->
             <section class="chat-windows">
-              <ul class="sent-messages">
+              <ul data-att="0" class="sent-messages active">
                 <li class="contatto">
                   <div class="cloud">
                     <span>Ciao, come stai?</span>
                     <span class="timestamp">42:42</span>
+                    <span class="arrow hidden">
+                      <i class="fas fa-chevron-down"></i>
+                      <div class="dropdown hidden">
+                        <p>Info messaggio</p>
+                        <p>Elimina messaggio</p>
+                      </div>
+                    </span>
+                  </div>
+                </li>
+
+
+                <li class="io">
+                  <div class="cloud">
+                    <span>Bene, tu?</span>
+                    <span class="timestamp">13:20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Qual è il senso della vita, l'universo e tutto quanto?</span>
+                    <span class="timestamp">13.20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+              </ul>
+
+              <ul data-att="1" class="sent-messages">
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Ciao, come stai?</span>
+                    <span class="timestamp">42:42</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
                   </div>
 
                 </li>
@@ -181,12 +214,139 @@
                   <div class="cloud">
                     <span>Bene, tu?</span>
                     <span class="timestamp">13:20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
                   </div>
                 </li>
                 <li class="contatto">
                   <div class="cloud">
                     <span>Qual è il senso della vita, l'universo e tutto quanto?</span>
                     <span class="timestamp">13.20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+              </ul>
+
+              <ul data-att="2" class="sent-messages">
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Ciao, come stai?</span>
+                    <span class="timestamp">42:42</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+
+                </li>
+                <li class="io">
+                  <div class="cloud">
+                    <span>Bene, tu?</span>
+                    <span class="timestamp">13:20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Qual è il senso della vita, l'universo e tutto quanto?</span>
+                    <span class="timestamp">13.20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+              </ul>
+
+              <ul data-att="3" class="sent-messages">
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Ciao, come stai?</span>
+                    <span class="timestamp">42:42</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+
+                </li>
+                <li class="io">
+                  <div class="cloud">
+                    <span>Bene, tu?</span>
+                    <span class="timestamp">13:20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Qual è il senso della vita, l'universo e tutto quanto?</span>
+                    <span class="timestamp">13.20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+              </ul>
+
+              <ul data-att="4" class="sent-messages">
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Ciao, come stai?</span>
+                    <span class="timestamp">42:42</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+
+                </li>
+                <li class="io">
+                  <div class="cloud">
+                    <span>Bene, tu?</span>
+                    <span class="timestamp">13:20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Qual è il senso della vita, l'universo e tutto quanto?</span>
+                    <span class="timestamp">13.20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+              </ul>
+
+              <ul data-att="5" class="sent-messages">
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Ciao, come stai?</span>
+                    <span class="timestamp">42:42</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+
+                </li>
+                <li class="io">
+                  <div class="cloud">
+                    <span>Bene, tu?</span>
+                    <span class="timestamp">13:20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Qual è il senso della vita, l'universo e tutto quanto?</span>
+                    <span class="timestamp">13.20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+              </ul>
+
+              <ul data-att="6" class="sent-messages">
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Ciao, come stai?</span>
+                    <span class="timestamp">42:42</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+
+                </li>
+                <li class="io">
+                  <div class="cloud">
+                    <span>Bene, tu?</span>
+                    <span class="timestamp">13:20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </li>
+                <li class="contatto">
+                  <div class="cloud">
+                    <span>Qual è il senso della vita, l'universo e tutto quanto?</span>
+                    <span class="timestamp">13.20</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
                   </div>
                 </li>
               </ul>

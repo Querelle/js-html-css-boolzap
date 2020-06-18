@@ -167,6 +167,18 @@ ul {
   align-items: center;
 }
 
+.chat-list > li:hover {
+  background-color: #d5f9ba;
+}
+
+.chat-list > li:hover .chat-preview {
+    color: #3F484E;
+}
+
+.chat-preview {
+  font-size: 0.9em;
+}
+
 .chat-list-item {
   position: relative;
   width: 86%;
@@ -223,18 +235,51 @@ ul {
 
 .sent-messages > li {
   display: flex;
+  position: relative;
+}
+
+.sent-messages.active {
+  display: block;
 }
 
 .sent-messages .cloud {
   display: inline-block;
   position: relative;
-  padding: 12px 10px 20px 10px;
+  padding: 12px 22px 20px 10px;
   margin: 5px 18px;
   border-radius: 10px;
   width: inherit;
   max-width: 65%;
-  min-width: 16%;
+  min-width: 14%;
   background-color: #FFF;
+}
+
+.arrow {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+}
+
+/* .cloud:hover .arrow {
+  display: block;
+} */
+
+.visible {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.dropdown {
+  position: absolute;
+  bottom: -310%;
+  right: -300%;
+  padding: 12px;
+  background-color: #F3FAB3;
+  width: 188px;
+
 }
 
 .chat-windows .timestamp {
@@ -253,7 +298,8 @@ ul {
 
 
 /* === Template === */
-.template {
+.template,
+.sent-messages {
   display: none;
 }
 
@@ -262,4 +308,5 @@ ul {
 @media screen and (min-width: 900px){
   .chat-main-wrapper {
     width: 84%;
+  }
 }
