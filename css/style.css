@@ -275,9 +275,9 @@ ul {
   bottom: -100%;
   right: 0;
   padding: 8px;
-  background-color: #F3FAB3;
+  background-color: #e5dcd4;
   min-width: 160px;
-
+  z-index: 2;
 }
 
 .chat-windows .timestamp {

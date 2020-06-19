@@ -26,11 +26,11 @@ $(document).ready(function() {
     var textUser = $('#input-form').val();
 
     if($('#input-form').val() != "") {
-      sendMessage(textUser, '.io');
-      $('.chat-windows').scrollTop($('.chat-windows').height());
+      sendMessage(textUser, 'io');
+
       setTimeout(function() {
-        sendMessage('ok', '.contatto')
-        $('.chat-windows').scrollTop($('.chat-windows').height());
+        sendMessage('ok', 'contatto')
+
       }, 1000)
 
     }
@@ -44,10 +44,10 @@ $(document).ready(function() {
       var textUser = $('#input-form').val();
 
       if($('#input-form').val() != "") {
-        sendMessage(textUser, '.io');
+        sendMessage(textUser, 'io');
         $('.chat-windows').scrollTop($('.chat-windows').height());
         setTimeout(function() {
-          sendMessage('ok', '.contatto')
+          sendMessage('ok', 'contatto')
           $('.chat-windows').scrollTop($('.chat-windows').height());
         }, 2000)
       }
@@ -70,13 +70,16 @@ $(document).ready(function() {
   });
 
 // === Dropdown
-  $('.arrow').on('click', function() {
+  $(document).on('click', '.arrow', function() {
     $(this).parents('li').siblings().find('.dropdown').removeClass('visible');
     $(this).parents('.cloud').find('.dropdown').toggleClass('visible');
   });
 
-  $('.delete').on('click', function() {
-    $(this).parents('li').hide();
+  $(document).on('click', '.delete', function() {
+    //var genitore = $(this).parents('li');
+    //console.log(genitore);
+    //genitore.hide();
+    $(this).closest('.message').remove();
   })
 
 
@@ -86,7 +89,7 @@ $(document).ready(function() {
 //  === FUNZIONI
 
 //  === genera timestamp
-  function getTimestamp () {
+  function getTime () {
     var dt = new Date();
     var time;
     if( dt.getMinutes() < 10 ) {
@@ -100,13 +103,16 @@ $(document).ready(function() {
 
 //  === invia messaggio
   function sendMessage(text, sender) {
-    var time = getTimestamp();
-    var path = '.template ' + sender;
+    var time = getTime();
+    var messageTemplate = $('.template .message').clone();
 
-    $('.template').find('.timestamp').text(time);
-    $('.template').find('.text').text(text);
+    messageTemplate.find('.timestamp').text(time);
+    messageTemplate.find('.text').text(text);
+    messageTemplate.addClass(sender);
 
-    $(path).clone().appendTo('.sent-messages.active');
+    $('.sent-messages.active').append(messageTemplate);
+
+    $('.chat-windows').scrollTop($('.chat-windows').height());
 
 
     $('#input-form').val("");
