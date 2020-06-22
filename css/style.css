@@ -275,9 +275,19 @@ ul {
   bottom: -100%;
   right: 0;
   padding: 8px;
-  background-color: #e5dcd4;
+  background-color: #FFF;
+  border-radius: 3px;
   min-width: 160px;
   z-index: 2;
+  box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.75);
+}
+
+.dropdown > * {
+  padding: 5px 0;
+}
+
+.dropdown p:first-child {
+  border-bottom: 1px #eaeaea solid;
 }
 
 .chat-windows .timestamp {
