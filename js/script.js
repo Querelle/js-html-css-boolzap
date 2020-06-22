@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     $('.chat-header h4[class="name"]').text(name)
     $('.chat-header img').attr('src', img);
+    $('p.last-seen').text('Ultimo accesso oggi alle 15.40')
 
     $('.chat-windows ul').each(function() {
       if($(this).attr('data-att') == selettore) {
@@ -95,7 +96,7 @@ $(document).ready(function() {
 
 //  === FUNZIONI
 
-//  === genera timestamp
+//  === genera orario
   function getTime () {
     var dt = new Date();
     var time;
