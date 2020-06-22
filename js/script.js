@@ -27,11 +27,15 @@ $(document).ready(function() {
 
     if($('#input-form').val() != "") {
       sendMessage(textUser, 'io');
+      setTimeout(function() {
+        $('p.last-seen').text('sta scrivendo...')
+      }, 1000)
+
 
       setTimeout(function() {
         sendMessage('ok', 'contatto')
 
-      }, 1000)
+      }, 4000)
 
     }
 
@@ -45,11 +49,14 @@ $(document).ready(function() {
 
       if($('#input-form').val() != "") {
         sendMessage(textUser, 'io');
-        $('.chat-windows').scrollTop($('.chat-windows').height());
+        setTimeout(function() {
+          $('p.last-seen').text('sta scrivendo...')
+        }, 1000)
+
         setTimeout(function() {
           sendMessage('ok', 'contatto')
           $('.chat-windows').scrollTop($('.chat-windows').height());
-        }, 2000)
+        }, 4000)
       }
     }
 
@@ -106,6 +113,7 @@ $(document).ready(function() {
     var time = getTime();
     var messageTemplate = $('.template .message').clone();
 
+    $('p.last-seen').text('Online')
     messageTemplate.find('.timestamp').text(time);
     messageTemplate.find('.text').text(text);
     messageTemplate.addClass(sender);
